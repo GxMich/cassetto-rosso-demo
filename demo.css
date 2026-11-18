@@ -189,3 +189,11 @@ button:disabled { cursor: not-allowed; opacity: .5; }
   .pv-campaign .pv-campaign__caption { position: static; grid-row: 3; margin: 0 24px 16px; max-width: none; }
   .pv-campaign h1 { font-size: clamp(40px, 11vw, 60px); }
 }
+
+/* Percorsi intimo / relax: foto piena a destra, testo a sinistra senza sovrapposizioni */
+.pv-worlds .pv-edit > img { right: 0; left: auto; width: 46%; height: 100%; opacity: 1; mix-blend-mode: normal; }
+.pv-worlds .pv-edit__copy { max-width: 54%; }
+.pv-worlds .pv-edit h2 { font-size: clamp(30px, 2.6vw, 42px); }
+.pv-worlds .pv-edit--ritual::after { display: none; }
+.pv-worlds .pv-edit--ritual h2, .pv-worlds .pv-edit--ritual p { max-width: none; }
+@media (max-width: 760px) { .pv-worlds .pv-edit > img { width: 42%; } .pv-worlds .pv-edit__copy { max-width: 58%; } .pv-worlds .pv-edit h2 { font-size: 30px; } }
